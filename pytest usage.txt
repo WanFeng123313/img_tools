@@ -1,0 +1,14 @@
+# 测试项目下所有以test开头或结尾的脚本
+pytest
+
+# 测试项目下指定脚本
+pytest ./test_sample
+
+# 测试指定脚本的指定函数
+pytest ./test_sample::test_pass
+
+# 选择一些测试用例，可以使用 -k 模糊匹配,即选择含有pass的函数进行测试
+pytest -k pass test_sample.py
+
+# 跳过个别用例，函数名上加
+@pytest.mark.ship()
